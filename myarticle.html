@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh-TW">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+    <title>我的文章</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        body {
+            background-color: #e0e0db;
+        }
+
+        .wrap {
+            margin: auto;
+            height: 90vh;
+            width: max-content;
+            padding-top: 20vh;
+            padding-left: 10vh;
+        }
+
+        .wrap:hover {
+            cursor: move;
+        }
+
+        .timeline li {
+            padding: 30px;
+            margin: auto;
+            display: inline-block;
+        }
+
+        .timeline li:nth-child(odd) {
+            transform: translateY(0%);
+
+        }
+
+        .timeline li:nth-child(even) {
+            transform: translateY(125%);
+        }
+
+        .timeline li::after {
+            content: "";
+            position: absolute;
+            width: 120%;
+            height: 3px;
+            background-color: #ccc;
+            left: -2%;
+        }
+
+        .timeline li:nth-child(odd)::after {
+            bottom: -13.5%;
+        }
+
+        .timeline li:nth-child(even)::after {
+            top: -13.5%;
+        }
+
+        .timeline li::before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 25px;
+            border-radius: 5px;
+            background-color: #bbb;
+            z-index: 2;
+        }
+
+        .timeline li:nth-child(odd)::before {
+            bottom: -21%;
+        }
+
+        .timeline li:nth-child(even)::before {
+            top: -21%;
+        }
+
+        .timeline a::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 80px;
+            background-color: #bbb;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .timeline li:nth-child(even) a::before {
+            top: -10%;
+        }
+
+
+        button.atc {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background-image: url("頭貼範例.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        button.atc:hover {
+            background-image: url("頭貼範例.jpg");
+        }
+
+        a.logo {
+            width: 105.2px;
+            height: 55.5px;
+            background-image: url("logo.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        a.logo:hover {
+            background-color: lightgray;
+            border-radius: 5px;
+        }
+
+        button.avatar {
+            background-image: url("頭貼範例.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            cursor: pointer;
+            display: inline;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+
+    </script>
+</head>
+
+<body>
+    <div class="top fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand logo" href="#"></a>
+            <button class="navbar-toggler logo" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav mr-auto">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="avatar">
+                    <button class="avatar"></button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="wrap">
+        <ul class="timeline">
+            <li data-toggle="popover" data-trigger="hover" title="Popover title"
+                data-content="And here's some amazing content. It's very engaging. Right?">
+                <button class="atc" data-toggle="modal" data-target="#exampleModalLong">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+            <li>
+                <button class="atc">
+                    <a href="#" class="atc"></a>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
