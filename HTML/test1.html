@@ -1,0 +1,205 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>醫典通</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style type="text/css">
+     /*將CSS寫在HTML中*/
+     input[type="submit"]{padding:5px 15px; background:#ccc; border:0 none;
+     cursor:pointer;
+     -webkit-border-radius: 5px;
+     border-radius: 5px; }
+    
+     input[type="text"]{padding:5px 55px; border:2px black solid;
+     cursor:pointer;
+     -webkit-border-radius: 5px;
+     border-radius: 5px; }
+    
+     .demo{
+     padding-top: 20px;
+     text-align: center
+     }
+
+     
+     li {
+     float: center;
+     display: inline-block;
+     }
+
+     li a {
+     display: inline-block;
+     color: white;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     }
+
+     li a:hover {
+     background-color: yellowgreen;
+     }
+
+     .active {
+     background-color: yellow;
+     }
+     
+     #header{
+     background-color: white;
+     display:inline;
+     padding-bottom: 20px;
+     display: flex;
+     justify-content: space-between;
+     font-family: sans-serif, "微軟正黑體";
+     font-size: 18px;
+     color: black;
+     
+     }
+
+     #nav{
+     background-color: #20292F;
+     padding: 5px;
+     font-family: sans-serif, "微軟正黑體";
+     font-size: 18px;
+     color: #FFF;
+     text-align: center;
+  
+     }
+
+     #aside1{
+     width: 20%;
+     height: 1000px;
+     text-align: left;
+     background-color: #63808F;
+     padding:20px;
+     float: left;
+     font-family: sans-serif, "微軟正黑體";
+     font-size: 18px;
+     color: #FFF;
+    
+
+     }
+
+     #section{
+     height: 1000px;
+     background-color: #849DAA;
+     line-height: 1.5em;
+     padding: 20px;
+     font-family: sans-serif, "微軟正黑體";
+     font-size: 18px;
+     color: #FFF;
+     text-align: center;
+     border: 1px dotted black;
+     overflow: scroll;
+     }
+
+     #aside2{
+     width: 20%;
+     height: 1000px;
+     text-align: center;
+     background-color: #63808F;
+     padding:20px 10px;
+     float: right;
+     font-family: sans-serif, "微軟正黑體";
+     font-size: 18px;
+     color: #FFF;
+     text-align: center;
+     }
+
+     #footer{
+     padding:20px;
+     background-color: #425660;
+     clear: both;
+     font-family: sans-serif, "微軟正黑體";
+     font-size: 18px;
+     color: #FFF;
+     text-align: center;
+     }
+
+     @media (max-width: 900px) {
+     nav, article {
+     width: 100%;
+     height: auto;
+    }
+    }
+     </style>
+  </head>
+
+<body>
+  <header id="header">
+    
+    <h1 style='font-size:30px;padding-left: 30px;'><i class='fas fa-file-medical' style='font-size:36px'></i>&nbsp;醫典通</h1>
+    
+    <div class="demo" >
+        <input type="text" placeholder="輸入文字">
+        <input type="submit" value="確認">
+    </div>
+    <a href="https://www.facebook.com/"><i class='fas fa-user-circle' style='font-size:60px;padding-right: 20px;'>
+    </i></a>
+    
+    
+    
+  </header>
+  
+  <nav id="nav" > 
+    <ul style="list-style-type:none;">
+        <li><a href="#home" class="active">全部</a></li>
+        <li><a href="https://www.google.com/search?biw=1536&bih=754&tbm=nws&sxsrf=ALeKk02DtT5oqAUhxukAWJKhDljqH0T9qQ%3A1596507916889&ei=DMcoX5X5NcKQr7wPisi4mA4&q=%E9%86%AB%E7%99%82&oq=%E9%86%AB%E7%99%82&gs_l=psy-ab.3..0l10.2285.2460.0.3211.2.2.0.0.0.0.66.120.2.2.0....0...1c.1.64.psy-ab..0.2.119....0.myv2XnsXzW4">最新</a></li>
+        <li><a href="#contact">收藏</a></li>
+        
+    </ul>
+  </nav>
+  
+  <aside id="aside1">
+    <ul style="padding-left: 0px;">
+        <button onclick="document.location='ttau/pregnancy.txt'" style="width:100%;height:30px;">婦產科</button><br>
+        <button onclick="document.location='ttau/heartdisease.txt'" style="width:100%;height:30px;">心臟科</button><br>
+        <button onclick="document.location='ttau/earnose.txt'" style="width:100%;height:30px;">耳鼻喉科</button><br>
+        <button onclick="document.location='ttau/eyes.txt'" style="width:100%;height:30px;">眼科</button><br>
+        <button onclick="document.location='ttau/skin.txt'" style="width:100%;height:30px;">皮膚科</button><br>
+        <button onclick="document.location='ttau/teeth.txt'" style="width:100%;height:30px;">牙科</button>
+      </ul>
+  </aside>
+  
+  <aside id="aside2">
+    <h1>ASIDE 右側邊</h1>
+  </aside>
+
+  <section id="section">
+      <h1>SECTION 區塊</h1>
+      <p>
+        腹痛是相當常見的症狀，引起腹痛的原因有很多，往往不易得到迅速的診斷，又加上嬰
+        幼兒腹痛時無法表達不適的情況，所以幼兒腹痛困擾不少家長，也夠讓醫師為之頭痛。
+        腹痛可分為急性與慢性兩大種類。在急性腹痛中有一些亟須手術治療如腸阻塞式闌尾炎
+        （俗稱盲腸炎）等，也有很多是由於胃腸感染，便秘，尿路感染，甚至腹腔器官外的疾病也
+        會引起腹痛如肺炎，幼年性醣尿病及風濕熱等。
+        不同的年齡各有不同的常見疾病，在嬰幼兒期，最常見引起急性腹痛的原因分別為：痙
+        攣性：嬰兒腹絞痛；阻塞性：腸套疊，嵌頓疝氣，腸扭結壞死；發炎性：腸胃感染，牛奶過
+        敏等。在學齡兒童則分別為：發炎性—腸胃、呼吸道或尿道感染，腸繫膜淡巴腺炎，過敏性
+        紫斑症，闌尾炎，腫瘤等，以及腸阻塞等疾病，尤以便秘是最常見的原因。青少年期則加上
+        消化性潰瘍，腹部頓傷，胰臟炎等疾病。
+        以下僅就其中最易為家長困擾的常見的嬰幼腹痛疾病，予以簡介。
+        
+      </p>
+      <hr size="8px" align="center" width="100%">
+      <p>
+        腹痛是相當常見的症狀，引起腹痛的原因有很多，往往不易得到迅速的診斷，又加上嬰
+        幼兒腹痛時無法表達不適的情況，所以幼兒腹痛困擾不少家長，也夠讓醫師為之頭痛。
+        腹痛可分為急性與慢性兩大種類。在急性腹痛中有一些亟須手術治療如腸阻塞式闌尾炎
+        （俗稱盲腸炎）等，也有很多是由於胃腸感染，便秘，尿路感染，甚至腹腔器官外的疾病也
+        會引起腹痛如肺炎，幼年性醣尿病及風濕熱等。
+        不同的年齡各有不同的常見疾病，在嬰幼兒期，最常見引起急性腹痛的原因分別為：痙
+        攣性：嬰兒腹絞痛；阻塞性：腸套疊，嵌頓疝氣，腸扭結壞死；發炎性：腸胃感染，牛奶過
+        敏等。在學齡兒童則分別為：發炎性—腸胃、呼吸道或尿道感染，腸繫膜淡巴腺炎，過敏性
+        紫斑症，闌尾炎，腫瘤等，以及腸阻塞等疾病，尤以便秘是最常見的原因。青少年期則加上
+        消化性潰瘍，腹部頓傷，胰臟炎等疾病。
+        以下僅就其中最易為家長困擾的常見的嬰幼腹痛疾病，予以簡介。
+  
+        
+      </p>
+    </section>
+    
+  <footer id="footer">
+    <h1>FOOTER 頁尾</h1>
+  </footer>
+
+</body>
+</html>

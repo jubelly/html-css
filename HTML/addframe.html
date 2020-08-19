@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>實現選單的下拉</title>
+	<style>
+	  div{width:200px;height:300px;border:1px solid #000;background-color:#cacfd6;}
+	  ul{ list-style:none; }
+	 li .submenu{margin-left: -30px;
+    line-height: 30px;}/* background-color:#9abbd8;   #b0bac7*/
+	 li .active{background-color:#b0bac7}
+	</style>
+</head>
+<body>
+  <div>
+    <ul>
+	<!-- 第一項選單-->
+	  <li>
+	  <a id="dropmenu">心臟科</a>
+	   <ul style="display:none">
+        <li class="submenu"><button onclick="document.location='ttau/heartdisease.txt'" style="width:100%;height:30px;">心臟病</button><br></li>
+		<li class="submenu"><button onclick="document.location='ttau/Myocardial-infarction.txt'"" style="width:100%;height:30px;">心肌梗塞</button><br></li>
+		<li class="submenu"><button onclick="document.location='ttau/Arrhythmia.txt'"" style="width:100%;height:30px;">心律不整</button><br></li>
+		
+	   </ul>
+	  </li>
+     
+	</ul>
+  </div> 
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script>
+     //選單的展開和收回
+     $('a').click(function(){
+		 var li_list=$(this).next();
+		 var otherli_list = $("a").next().not($(this).next());
+         otherli_list.hide();
+		 li_list.toggle(500);
+	 });
+   //新增樣式
+     $("li[class='submenu']").click(function(){
+	  $("li").next().siblings().removeClass('active');
+      $(this).removeClass('active');
+      $(this).addClass('active');
+	});
+
+ 
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    input[type="submit"]{padding:5px 25px; background:#ccc; border:0 none;
+cursor:pointer;
+-webkit-border-radius: 5px;
+border-radius: 5px; }
+    
+    input[type="text"]{padding:5px 75px; border:2px black solid;
+cursor:pointer;
+-webkit-border-radius: 5px;
+border-radius: 5px; }
+    
+.demo{
+    padding-top: 0px;
+    padding-bottom: 20px;
+    text-align: center
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  background-color: #F0FFF0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #ffffff;
+}
+
+.active {
+  background-color: #008800;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #77A88D;
+  padding: 20px;
+  height: 100px ;
+  text-align: left;
+  font-size: 25px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 20%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: #F0FFF0
+  padding: 10px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 60%;
+  background-color: #F0FFF0;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #77A88D;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<!--<h2>CSS Layout Float</h2>
+<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
+-->
+<header>
+    <div class="demo"><h2>醫典通&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="輸入文字" ><input type="submit" value="確認"></h2></div>
+   
+  </header>
+
+
+
+<ul>
+    <li><a href="#home" class="active">主頁</a></li>
+    <li><a href="https://www.google.com/search?biw=1536&bih=754&tbm=nws&sxsrf=ALeKk02DtT5oqAUhxukAWJKhDljqH0T9qQ%3A1596507916889&ei=DMcoX5X5NcKQr7wPisi4mA4&q=%E9%86%AB%E7%99%82&oq=%E9%86%AB%E7%99%82&gs_l=psy-ab.3..0l10.2285.2460.0.3211.2.2.0.0.0.0.66.120.2.2.0....0...1c.1.64.psy-ab..0.2.119....0.myv2XnsXzW4">最新消息</a></li>
+    <li><a href="#contact">飲食建議</a></li>
+    <li><a href="#about">運動建議</a></li>
+    <li><a href="#contact">粉絲專頁</a></li>
+    <li><a href="#about">經驗分享</a></li>
+</ul>
+<section>
+  <nav>
+    <ul>
+      <button onclick="document.location='ttau/test1.html'">憂鬱症</button><br>
+      <button onclick="document.location='https://www.jah.org.tw/form/index-1.asp?m=3&m1=8&m2=362&gp=361&id=139'">心臟病</button><br>
+      <button onclick="document.location='https://www.canceraway.org.tw/page.asp?IDno=27'">癌症</button><br>
+      <button onclick="document.location='http://www.kmuh.org.tw/www/kmcj/data/9010/4804.htm'">腎臟病</button><br>
+      <button onclick="document.location='https://www.medpartner.club/dizziness-care-treatment/'">頭暈</button><br>
+      <button onclick="document.location='http://blog.vitabox.com.tw/2020/01/anemia-symptom-improve-treatment/'">貧血</button>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>醫療新聞</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <a href="https://www.google.com/search?biw=1536&bih=754&tbm=nws&sxsrf=ALeKk02DtT5oqAUhxukAWJKhDljqH0T9qQ%3A1596507916889&ei=DMcoX5X5NcKQr7wPisi4mA4&q=%E9%86%AB%E7%99%82&oq=%E9%86%AB%E7%99%82&gs_l=psy-ab.3..0l10.2285.2460.0.3211.2.2.0.0.0.0.66.120.2.2.0....0...1c.1.64.psy-ab..0.2.119....0.myv2XnsXzW4" title="Go to mednews HTML section">前往醫療新聞</a>
+
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>

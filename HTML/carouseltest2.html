@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        #carouselbuttonsControls{
+            background-color: #e0e0db;
+        }
+        button.board{
+            background-color: #e0e0db;
+            color: #7a7a6b;
+            font-weight: bolder;
+            border: #cececa solid 1px;
+            border-top: none;
+            border-bottom: none;
+        }
+        button.board:hover{
+            background-color: #acac98;
+            border: #acac98 solid 1px;
+            border-top: none;
+            border-bottom: none;
+        }
+    </style>
+    <title>Carousel Board Buttons!</title>
+  </head>
+  <body>
+    
+    <section id="board">
+        <div class="container">
+            <div class="row board sticky-top d-flex">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div id="carouselbuttonsControls" class="carousel slide" data-interval="false" data-ride="carousel" data-pause="hover">
+                        <center>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary board b_00">癌症</button>
+                                        <button type="button" class="btn btn-secondary board b_01">家醫科</button>
+                                        <button type="button" class="btn btn-secondary board b_02">內科</button>
+                                        <button type="button" class="btn btn-secondary board b_03">外科</button>
+                                        <button type="button" class="btn btn-secondary board b_04">小兒科</button>
+                                        <button type="button" class="btn btn-secondary board b_05">婦產科</button>
+                                        <button type="button" class="btn btn-secondary board b_06">骨科</button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary board b_07">神經外科</button>
+                                        <button type="button" class="btn btn-secondary board b_08">泌尿科</button>
+                                        <button type="button" class="btn btn-secondary board b_09">耳鼻喉科</button>
+                                        <button type="button" class="btn btn-secondary board b_10">眼科</button>
+                                        <button type="button" class="btn btn-secondary board b_11">皮膚科</button>
+                                        <button type="button" class="btn btn-secondary board b_12">神經科</button>
+                                        <button type="button" class="btn btn-secondary board b_13">精神科</button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary board b_14">復健科</button>
+                                        <button type="button" class="btn btn-secondary board b_15">整型外科</button>
+                                        <button type="button" class="btn btn-secondary board b_22">急診醫學科</button>
+                                        <button type="button" class="btn btn-secondary board b_40">牙科</button>
+                                        <button type="button" class="btn btn-secondary board b_60">中醫科</button>
+                                        <button type="button" class="btn btn-secondary board b_2B">洗腎科</button>
+                                        <button type="button" class="btn btn-secondary board b_ot">其他科</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </center>
+                        <a class="carousel-control-prev" href="#carouselbuttonsControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselbuttonsControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
