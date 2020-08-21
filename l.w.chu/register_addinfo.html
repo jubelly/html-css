@@ -14,7 +14,13 @@
   <style>
     body {
       font-family: 'Noto Serif TC', serif;
-      padding-top: 5vh;
+      font-size: 14px;
+    }
+
+    form.main {
+      background-color: #e0e0db;
+      padding: 20px;
+      border-radius: 10px;
     }
 
     .btn {
@@ -27,30 +33,30 @@
 <body>
   <div class="container">
     <div>
-      <form>
+      <form class="main">
         <div class="form-group">
-          <label for="inputname">姓名Name</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="林彥亨">
+          <label for="inputAddress">姓名Name</label>
+          <input type="text" class="form-control form-control-sm" id="inputAddress" placeholder="林彥亨">
         </div>
         <div class="form-group">
-          <label for="inputphone">手機Phone</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="0987-654-321">
+          <label for="inputAddress2">手機Phone</label>
+          <input type="text" class="form-control form-control-sm" id="inputAddress2" placeholder="0987-654-321">
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputnickname">綽號Nickname</label>
-            <input type="text" class="form-control" id="inputCity">
+            <label for="inputCity">綽號Nickname</label>
+            <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="林彥享">
           </div>
           <div class="form-group col-md-4">
             <label for="inputState">生日Birthday</label>
-            <select id="inputState" class="form-control">
+            <select id="inputState" class="form-control form-control-sm">
               <option selected>Choose...</option>
               <option>...</option>
             </select>
           </div>
           <div class="form-group col-md-2">
             <label for="inputgender">性別Gender</label>
-            <select id="inputgender" class="form-control">
+            <select id="inputgender" class="form-control form-control-sm">
               <option selected>男male</option>
               <option>女female</option>
             </select>
@@ -59,11 +65,11 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputEmail4">帳號(信箱Email)</label>
-            <input type="email" class="form-control" id="inputEmail4">
+            <input type="email" class="form-control form-control-sm" id="inputEmail4">
           </div>
           <div class="form-group col-md-6">
             <label for="inputPassword4">密碼Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
+            <input type="password" class="form-control form-control-sm" id="inputPassword4">
           </div>
         </div>
         <div class="form-group">
@@ -74,7 +80,7 @@
             </label>
           </div>
         </div>
-        <button type="submit" class="btn">註冊Sign in</button>
+        <button type="submit" class="btn ">註冊Sign in</button>
       </form>
     </div>
   </div>

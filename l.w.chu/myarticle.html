@@ -149,6 +149,10 @@
             width: 50px;
             height: 50px;
         }
+
+        div.footer {
+            padding: 5vh;
+        }
     </style>
     <script>
         $(function () {
@@ -186,14 +190,14 @@
     </div>
     <div class="wrap">
         <ul class="timeline">
-            <li data-toggle="popover" data-trigger="hover" title="Popover title"
-                data-content="And here's some amazing content. It's very engaging. Right?">
-                <button class="atc" data-toggle="modal" data-target="#exampleModalLong">
+            <li data-toggle="popover" data-trigger="hover" title="林彥享的燙傷處理秘訣#2"
+                data-content="今天來跟大家分享個我是如何處理燙傷後續換藥的，如果想看燙傷當下的故事的可以到#1去看看...">
+                <button class="atc" data-toggle="modal" data-target="#exampleModalLong1">
                     <a href="#" class="atc"></a>
                 </button>
             </li>
-            <li>
-                <button class="atc">
+            <li data-toggle="popover" data-trigger="hover" title="文章標題" data-content="文章擷取">
+                <button class="atc" data-toggle="modal" data-target="#exampleModalLong2">
                     <a href="#" class="atc"></a>
                 </button>
             </li>
@@ -259,22 +263,78 @@
             </li>
         </ul>
     </div>
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    <div class="footer fixed-bottom">
+        <button type="button" class="btn btn-dark btn-lg">發文</button>
+        <div class="btn-group dropup">
+            <button type="button" class="btn btn-success btn-lg board dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                選擇科別
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">所有</a>
+                <a class="dropdown-item" href="#">皮膚科</a>
+                <a class="dropdown-item" href="#">牙科</a>
+                <a class="dropdown-item" href="#">眼科</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">林彥享的燙傷處理秘訣#2</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    今天來跟大家分享個我是如何處理燙傷後續換藥的，如果想看燙傷當下的故事的可以到#1去看看(￣∇￣)(以下畫面可能引起不適請斟酌點開) Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Minus magnam ea repellendus autem accusamus esse modi delectus cumque
+                    perspiciatis! Voluptate ab, molestias molestiae, labore soluta perspiciatis inventore hic mollitia
+                    veniam tenetur earum excepturi possimus nam veritatis totam sequi! Minus non ex itaque aperiam.
+                    Reiciendis veritatis fuga illo assumenda quibusdam ex maxime blanditiis sint nihil deleniti
+                    laudantium inventore odio repudiandae, officia ipsum vero? Alias, voluptas repellendus provident
+                    autem quas modi doloribus vero est aliquid distinctio voluptates incidunt corrupti dignissimos a
+                    debitis? Rerum totam voluptatibus odit corrupti autem facere, quibusdam, dolorum porro, adipisci
+                    omnis in distinctio quo. Provident odio sit eos nihil nemo, modi veniam itaque tenetur magni dolorum
+                    at distinctio molestias amet rerum aut expedita delectus qui officiis eligendi maxime? Perspiciatis
+                    optio dolore hic nihil assumenda. Dolorum minus similique libero dicta nostrum voluptatem! Aliquam
+                    accusantium corporis dolores velit, commodi non consequatur porro. Distinctio, cumque asperiores
+                    adipisci iure, sit voluptas sapiente voluptatibus nam quibusdam, nostrum facere? Eius libero dolor
+                    quisquam molestias, neque corporis, explicabo officia quod quaerat dolorum tenetur nulla rerum nobis
+                    repellendus ducimus alias veniam! Molestiae placeat odit tenetur consequatur explicabo, recusandae
+                    iure quaerat omnis! Quam, vitae facere fuga amet suscipit ducimus odit autem ab nesciunt itaque
+                    cumque nam, modi consequatur, consequuntur voluptate temporibus! Sed tempore, possimus quod adipisci
+                    sit recusandae esse expedita! Quisquam sint pariatur eligendi rerum laudantium ratione temporibus
+                    dolore similique. Dolores amet labore enim vero animi sed tempora, officiis nostrum soluta explicabo
+                    quam numquam dolorum optio modi, quidem nemo asperiores rerum sequi quod. Voluptatibus, repudiandae
+                    quod? Eum, qui!
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary">編輯</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">文章標題</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    內文...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">編輯</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
                 </div>
             </div>
         </div>
