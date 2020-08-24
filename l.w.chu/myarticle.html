@@ -150,8 +150,62 @@
             height: 50px;
         }
 
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            right: 0;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         div.footer {
             padding: 5vh;
+        }
+
+        .scrollable-menu {
+            height: auto;
+            max-height: 240px;
+            overflow-x: hidden;
+        }
+
+        iframe.post {
+            align-self: center;
+            vertical-align: top;
+            border-radius: 5px;
+            border: white;
+            background-color: white;
+            width: 100%;
+            height: 450px;
+        }
+
+        div.modal-body {
+            height: max-content;
         }
     </style>
     <script>
@@ -161,6 +215,18 @@
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').trigger('focus')
         })
+        $(function () {
+
+            $(".dropdown-menu").on('click', 'a', function () {
+                $(".board:first-child").text($(this).text());
+                $(".board:first-child").val($(this).text());
+            });
+
+        });
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+
 
     </script>
 </head>
@@ -182,8 +248,13 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>
-                <div class="avatar">
+                <div class="avatar dropdown">
                     <button class="avatar"></button>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" href="#">我的收藏</a>
+                        <a class="dropdown-item" href="#">我的文章</a>
+                        <a class="dropdown-item" href="#">登出</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -264,18 +335,36 @@
         </ul>
     </div>
     <div class="footer fixed-bottom">
-        <button type="button" class="btn btn-dark btn-lg">發文</button>
+        <button type="button" class="btn btn-dark btn-lg pen" data-toggle="modal"
+            data-target="#postarticleWrite">發文</button>
         <div class="btn-group dropup">
             <button type="button" class="btn btn-success btn-lg board dropdown-toggle" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 選擇科別
             </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">所有</a>
-                <a class="dropdown-item" href="#">皮膚科</a>
-                <a class="dropdown-item" href="#">牙科</a>
+            <ul class="dropdown-menu scrollable-menu boards" role="menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">癌症</a>
+                <a class="dropdown-item" href="#">家醫科</a>
+                <a class="dropdown-item" href="#">內科</a>
+                <a class="dropdown-item" href="#">外科</a>
+                <a class="dropdown-item" href="#">小兒科</a>
+                <a class="dropdown-item" href="#">婦產科</a>
+                <a class="dropdown-item" href="#">骨科</a>
+                <a class="dropdown-item" href="#">神經外科</a>
+                <a class="dropdown-item" href="#">泌尿科</a>
+                <a class="dropdown-item" href="#">耳鼻喉科</a>
                 <a class="dropdown-item" href="#">眼科</a>
-            </div>
+                <a class="dropdown-item" href="#">皮膚科</a>
+                <a class="dropdown-item" href="#">神經科</a>
+                <a class="dropdown-item" href="#">精神科</a>
+                <a class="dropdown-item" href="#">復健科</a>
+                <a class="dropdown-item" href="#">整型外科</a>
+                <a class="dropdown-item" href="#">急診醫學科</a>
+                <a class="dropdown-item" href="#">牙科</a>
+                <a class="dropdown-item" href="#">中醫科</a>
+                <a class="dropdown-item" href="#">洗腎科</a>
+                <a class="dropdown-item" href="#">其他科</a>
+            </ul>
         </div>
 
     </div>
@@ -335,6 +424,27 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary">編輯</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="postarticleWrite" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        撰寫你的貼文吧!
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe class="post step1" src="post_article/post_article_write.html"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">取消</button>
                 </div>
             </div>
         </div>
