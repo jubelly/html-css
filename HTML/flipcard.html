@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px 10px;
+        }
+
+        .block {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .notification {
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+            padding: 25px 36px;
+            position: relative;
+            display: inline-block;
+            border-radius: 2px;
+        }
+
+        .notification:hover {
+            background: #77a88d;
+        }
+
+        .notification .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            padding: 5px 10px;
+            border-radius: 50%;
+            background: red;
+            color: white;
+        }
+
+        .btn {
+            border: none;
+            background-color: inherit;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+
+        }
+
+        /* On mouse-over */
+        .btn:hover {
+            background: #eee;
+        }
+
+        .info {
+            color: white;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+        <a href="#" class="notification">
+            <span>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="logo.png" alt="Avatar" style="width:300px;height:300px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <button class="btn info">心臟病造成猝死</button>
+                            <button class="btn info">心血管組塞送醫</button>
+                            <button class="btn info">心臟病造成猝死</button>
+                            <button class="btn info">心臟病造成猝死</button>
+                            <button class="btn info">心臟病造成猝死</button>
+                            <button class="btn info">心臟病造成猝死</button>
+
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <span class="badge">6</span>
+        </a>
+
+        <a href="#" class="notification">
+            <span>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="logo.png" alt="Avatar" style="width:300px;height:300px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <button class="btn info">心臟病造成猝死</button>
+                            <button class="btn info">心血管組塞送醫</button>
+                            <button class="btn info">心臟病造成猝死</button>
+                            <button class="btn info">心臟病造成猝死</button>
+                            <button class="btn info">心臟病造成猝死</button>
+                            <button class="btn info">心臟病造成猝死</button>
+
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <span class="badge">6</span>
+        </a>
+
+        <a href="#" class="notification">
+            <span>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="logo.png" alt="Avatar" style="width:300px;height:300px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <button class="btn info">心臟病造成猝死</button>
+                            <button class="btn info">心血管組塞送醫</button>
+                            <button class="btn info">心臟病造成猝死</button>
+                            <button class="btn info">心臟病造成猝死</button>
+                            <button class="btn info">心臟病造成猝死</button>
+                            <button class="btn info">心臟病造成猝死</button>
+
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <span class="badge">6</span>
+        </a>
+
+    </div>
+
+</body>
+
+</html>
