@@ -100,6 +100,8 @@
 
         }
 
+
+
         div.avatar {
 
             text-align: center;
@@ -118,9 +120,12 @@
             height: 132px;
         }
 
-        .checkbox {
-            display: inline;
-
+        label.bottom {
+            width: 100%;
+            color: black;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
 
         }
 
@@ -128,9 +133,6 @@
             margin: 5px;
         }
 
-        label.checkbox {
-            display: inline-flex;
-        }
 
         input {
             background-color: #fafaf3;
@@ -138,16 +140,8 @@
             margin: 5px;
         }
 
-        input.check {
-            width: 20px;
-
-        }
-
-
-        a {
-            width: 75%;
+        a.enter {
             text-align: right;
-            color: black;
         }
     </style>
 </head>
@@ -184,9 +178,9 @@
                 <input type="password" placeholder="******" name="psw" required>
 
                 <button type="submit">登入</button>
-                <label class="checkbox">
-                    <input type="checkbox" checked="checked" name="remember" class="check"> 記住密碼
-                    <a href="#">註冊</a>
+                <label class="bottom">
+                    <a href="#">回首頁</a>
+                    <a class="enter" href="#">註冊</a>
                 </label>
             </div>
 
@@ -206,6 +200,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </body>
 
 </html>
