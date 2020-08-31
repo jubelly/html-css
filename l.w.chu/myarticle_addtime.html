@@ -112,16 +112,9 @@
             top: -10%;
         }
 
-        .timeline a::after {
-            content: "";
-            position: absolute;
-            width: 100px;
-            height: 40px;
-            border-radius: 5px;
-            z-index: 2;
-            right: -60px;
-            bottom: 25px;
-            font-size: 18px;
+
+        nav {
+            background-color: #77a88d;
         }
 
         button.atc {
@@ -138,9 +131,9 @@
         }
 
         a.logo {
-            width: 105.2px;
-            height: 55.5px;
-            background-image: url("logo.png");
+            width: 253px;
+            height: 79.4px;
+            background-image: url("logo2_0.png");
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -218,6 +211,11 @@
         div.modal-body {
             height: max-content;
         }
+
+        .badge {
+            font-size: 16px;
+            margin-right: 3px;
+        }
     </style>
     <style id="addtime">
     </style>
@@ -240,22 +238,42 @@
             $('#myInput').trigger('focus')
         })
         var css = document.getElementById('addtime');
-        var d = document.getElementById('atcid');
-        var e = document.getElementById('divisionid')
         var c = css.sheet;
+        var d = document.getElementById('atcid');
+
         c.insertRule("#atcid#atcid::before{content:'發文時間';}", 0);
         c.insertRule("#atcid#atcid::before{color:black;}", 0);
         c.insertRule("#atcid#atcid::before{text-align:center;}", 0);
-        c.insertRule("#divisionid#divisionid::after{content:'科別名';}", 0);
-        c.insertRule("#divisionid#divisionid::after{color:black;}", 0);
 
+    </script>
+    <script>
+        var clicked = false, clickX;
+        $(document).on({
+            'mousemove': function (e) {
+                clicked && updateScrollPos(e);
+            },
+            'mousedown': function (e) {
+                e.preventDefault();
+                clicked = true;
+                clickX = e.pageX;
+            },
+            'mouseup': function () {
+                clicked = false;
+                $('html').css('cursor', 'auto');
+            }
+        });
+
+        var updateScrollPos = function (e) {
+            $('html').css('cursor', 'grabbing');
+            $(window).scrollLeft($(window).scrollLeft() + (clickX - e.pageX));
+        }
     </script>
 </head>
 
 <body>
     <div class="top fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand logo" href="#"></a>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand logo" href="practice.html"></a>
             <button class="navbar-toggler logo" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -266,14 +284,14 @@
                 <div class="navbar-nav mr-auto">
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>
                 <div class="avatar dropdown">
                     <button class="avatar"></button>
                     <div class="dropdown-content">
                         <a class="dropdown-item" href="#">我的收藏</a>
-                        <a class="dropdown-item" href="#">我的文章</a>
+                        <a class="dropdown-item" href="myarticle_addtime.html">我的文章</a>
                         <a class="dropdown-item" href="#">登出</a>
                     </div>
                 </div>
@@ -358,8 +376,8 @@
     <div class="footer fixed-bottom">
         <button type="button" class="btn btn-dark btn-lg pen" data-toggle="modal"
             data-target="#postarticleWrite">發文</button>
-        <div class="btn-group dropup">
-            <button type="button" class="btn btn-success btn-lg board dropdown-toggle" data-toggle="dropdown"
+        <div class="btn-group dropup board">
+            <button type="button" class="btn btn-outline-dark btn-lg board dropdown-toggle" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 選擇科別
             </button>
@@ -394,7 +412,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">林彥享的燙傷處理秘訣#2</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">林彥享的燙傷處理秘訣#2 <br><sub>|皮膚科</sub></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -421,6 +439,8 @@
                     dolore similique. Dolores amet labore enim vero animi sed tempora, officiis nostrum soluta explicabo
                     quam numquam dolorum optio modi, quidem nemo asperiores rerum sequi quod. Voluptatibus, repudiandae
                     quod? Eum, qui!
+                    <hr><a href="#" class="badge badge-success">燙傷</a><a href="#" class="badge badge-info">後續處理</a><a
+                        href="#" class="badge badge-dark">我是全能小畫家</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary">編輯</button>
@@ -434,13 +454,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">文章標題</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">文章標題 <br><sub>|科別</sub></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     內文...
+                    <hr><a href="#" class="badge badge-success">標籤</a><a href="#" class="badge badge-info">標籤</a><a
+                        href="#" class="badge badge-dark">標籤</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary">編輯</button>

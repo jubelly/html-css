@@ -211,6 +211,11 @@
         div.modal-body {
             height: max-content;
         }
+
+        .badge {
+            font-size: 16px;
+            margin-right: 3px;
+        }
     </style>
     <style id="addtime">
     </style>
@@ -240,6 +245,28 @@
         c.insertRule("#atcid#atcid::before{color:black;}", 0);
         c.insertRule("#atcid#atcid::before{text-align:center;}", 0);
 
+    </script>
+    <script>
+        var clicked = false, clickX;
+        $(document).on({
+            'mousemove': function (e) {
+                clicked && updateScrollPos(e);
+            },
+            'mousedown': function (e) {
+                e.preventDefault();
+                clicked = true;
+                clickX = e.pageX;
+            },
+            'mouseup': function () {
+                clicked = false;
+                $('html').css('cursor', 'auto');
+            }
+        });
+
+        var updateScrollPos = function (e) {
+            $('html').css('cursor', 'grabbing');
+            $(window).scrollLeft($(window).scrollLeft() + (clickX - e.pageX));
+        }
     </script>
 </head>
 
@@ -385,7 +412,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">林彥享的燙傷處理秘訣#2</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">林彥享的燙傷處理秘訣#2 <br><sub>|皮膚科</sub></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -412,6 +439,8 @@
                     dolore similique. Dolores amet labore enim vero animi sed tempora, officiis nostrum soluta explicabo
                     quam numquam dolorum optio modi, quidem nemo asperiores rerum sequi quod. Voluptatibus, repudiandae
                     quod? Eum, qui!
+                    <hr><a href="#" class="badge badge-success">燙傷</a><a href="#" class="badge badge-info">後續處理</a><a
+                        href="#" class="badge badge-dark">我是全能小畫家</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary">編輯</button>
@@ -425,13 +454,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">文章標題</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">文章標題 <br><sub>|科別</sub></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     內文...
+                    <hr><a href="#" class="badge badge-success">標籤</a><a href="#" class="badge badge-info">標籤</a><a
+                        href="#" class="badge badge-dark">標籤</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary">編輯</button>
