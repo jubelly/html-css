@@ -197,6 +197,12 @@
 
         div.footer {
             padding: 5vh;
+            width: 100%;
+        }
+
+        div.board {
+            position: absolute;
+            right: 10px;
         }
 
         .scrollable-menu {
@@ -231,10 +237,49 @@
         .media {
             margin-bottom: 25px;
         }
+
+        div.give {
+            float: right;
+        }
+
+
+        a.icon {
+            padding: 2px;
+            border-radius: 50%;
+            margin-right: 10px;
+            width: 27px;
+            height: 27px;
+            display: inline-flex;
+            justify-content: center;
+            outline: none;
+        }
+
+        a.already {
+            padding: 5px;
+            background-color: #f8dad4;
+        }
+
+        div.give a:hover {
+            background-color: #e0e0db;
+        }
+
+        div.give img {
+            width: 25px;
+            height: 25px;
+        }
+
+        div.total span {
+            color: crimson;
+        }
     </style>
     <style id="addtime">
     </style>
     <script>
+        function ResetPost() {
+            var url = "post_article/post_article_write.html"
+            var el = document.getElementById('postiframe');
+            el.src = url;
+        }
         $(function () {
             $('[data-toggle="popover"]').popover()
         })
@@ -282,6 +327,12 @@
             $('html').css('cursor', 'grabbing');
             $(window).scrollLeft($(window).scrollLeft() + (clickX - e.pageX));
         }
+    </script>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("already");
+        }
+
     </script>
 </head>
 
@@ -391,36 +442,6 @@
     <div class="footer fixed-bottom">
         <button type="button" class="btn btn-dark btn-lg pen" data-toggle="modal"
             data-target="#postarticleWrite">發文</button>
-        <div class="btn-group dropup board">
-            <button type="button" class="btn btn-outline-dark btn-lg board dropdown-toggle" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                選擇科別
-            </button>
-            <ul class="dropdown-menu scrollable-menu boards" role="menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">癌症</a>
-                <a class="dropdown-item" href="#">家醫科</a>
-                <a class="dropdown-item" href="#">內科</a>
-                <a class="dropdown-item" href="#">外科</a>
-                <a class="dropdown-item" href="#">小兒科</a>
-                <a class="dropdown-item" href="#">婦產科</a>
-                <a class="dropdown-item" href="#">骨科</a>
-                <a class="dropdown-item" href="#">神經外科</a>
-                <a class="dropdown-item" href="#">泌尿科</a>
-                <a class="dropdown-item" href="#">耳鼻喉科</a>
-                <a class="dropdown-item" href="#">眼科</a>
-                <a class="dropdown-item" href="#">皮膚科</a>
-                <a class="dropdown-item" href="#">神經科</a>
-                <a class="dropdown-item" href="#">精神科</a>
-                <a class="dropdown-item" href="#">復健科</a>
-                <a class="dropdown-item" href="#">整型外科</a>
-                <a class="dropdown-item" href="#">急診醫學科</a>
-                <a class="dropdown-item" href="#">牙科</a>
-                <a class="dropdown-item" href="#">中醫科</a>
-                <a class="dropdown-item" href="#">洗腎科</a>
-                <a class="dropdown-item" href="#">其他科</a>
-            </ul>
-        </div>
-
     </div>
     <div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
         aria-hidden="true">
@@ -469,6 +490,16 @@
                         quod? Eum, qui!
                         <hr><a href="#" class="badge badge-success">燙傷</a><a href="#"
                             class="badge badge-info">後續處理</a><a href="#" class="badge badge-dark">我是全能小畫家</a>
+                        <hr>
+                        <div class="give"><a onclick="myFunction(this)" class="icon" href="#" tabindex="0"
+                                data-toggle="popover" data-trigger="hover" title="" data-placement="top"
+                                data-content="給予關懷"><img src="empathy.png"></a><span><a onclick="myFunction(this)"
+                                    class="icon" href="#" tabindex="0" data-toggle="popover" data-trigger="hover"
+                                    title="" data-content="深表懷疑" data-placement="top"><img
+                                        src="question.png"></a></span><span><a onclick="myFunction(this)" class="icon"
+                                    href="#" tabindex="0" data-toggle="popover" data-trigger="hover" title=""
+                                    data-content="收藏!" data-placement="top"><img src="favorite.png"></a></span></div>
+                        <div class="total">給予關懷:18 &nbsp 回應:10 &nbsp <span>懷疑:1</span></div>
                     </div>
                     <div class="comments">
                         <div class="media">
@@ -520,6 +551,16 @@
                         內文...
                         <hr><a href="#" class="badge badge-success">標籤</a><a href="#" class="badge badge-info">標籤</a><a
                             href="#" class="badge badge-dark">標籤</a>
+                        <hr>
+                        <div class="give"><a onclick="myFunction(this)" class="icon" href="#" tabindex="0"
+                                data-toggle="popover" data-trigger="hover" title="" data-placement="top"
+                                data-content="給予關懷"><img src="empathy.png"></a><span><a onclick="myFunction(this)"
+                                    class="icon" href="#" tabindex="0" data-toggle="popover" data-trigger="hover"
+                                    title="" data-content="深表懷疑" data-placement="top"><img
+                                        src="question.png"></a></span><span><a onclick="myFunction(this)" class="icon"
+                                    href="#" tabindex="0" data-toggle="popover" data-trigger="hover" title=""
+                                    data-content="收藏!" data-placement="top"><img src="favorite.png"></a></span></div>
+                        <div class="total">給予關懷:98 &nbsp 回應:81 &nbsp <span>懷疑:2</span></div>
                     </div>
                     <div class="comments">
                         <div class="media">
@@ -561,10 +602,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <iframe class="post step1" src="post_article/post_article_write.html"></iframe>
+                    <iframe id="postiframe" class="post step1" src="post_article/post_article_write.html"></iframe>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-dark" onclick="ResetPost()">捨棄貼文</button>
                 </div>
             </div>
         </div>
