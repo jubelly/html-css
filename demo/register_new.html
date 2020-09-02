@@ -401,7 +401,10 @@
 <script src="datetimepicker-master/jquery.js"></script>
 <script src="datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
 <script>
-    jQuery('#datetimepicker').datetimepicker();
+    jQuery('#datetimepicker').datetimepicker({
+        timepicker: false,
+        format: 'd.m.Y'
+    });
 </script>
 
 </html>
