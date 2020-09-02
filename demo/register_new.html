@@ -270,11 +270,12 @@
             //... and fix the Previous/Next buttons:
             if (n == 0) {
                 document.getElementById("prevBtn").style.display = "none";
-            } else {
+            } else if (n == (x.length - 1)) { document.getElementById("prevBtn").style.display = "none"; }
+            else {
                 document.getElementById("prevBtn").style.display = "inline";
             }
             if (n == (x.length - 1)) {
-                document.getElementById("nextBtn").innerHTML = "完成!";
+                document.getElementById("nextBtn").style.display = "none";
             } else {
                 document.getElementById("nextBtn").innerHTML = "下一步";
             }
@@ -292,10 +293,18 @@
             // Increase or decrease the current tab by 1:
             currentTab = currentTab + n;
             // if you have reached the end of the form...
-            if (currentTab >= x.length) {
+            if (currentTab == 2) {
                 // ... the form gets submitted:
-                document.getElementById("regForm").submit();
-                return false;
+                var time = 1500;//倒數1.5秒
+                !function MyCounter() {
+                    if (time <= 0) {
+                        document.getElementById("regForm").submit();
+                        return false;
+                    } else {
+                        setTimeout(MyCounter, 1000);
+                    }
+                    time -= 1000;
+                }();
             }
             // Otherwise, display the correct tab:
             showTab(currentTab);
@@ -392,7 +401,7 @@
                 length.classList.remove("valid");
                 length.classList.add("invalid");
             }
-        }
+        } 
     </script>
 
 </body>
