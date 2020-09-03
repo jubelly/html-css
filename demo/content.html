@@ -125,6 +125,14 @@
     div.total span {
       color: crimson;
     }
+
+    .ya {
+      background-color: #f8dad4;
+    }
+
+    .non {
+      background-color: whitesmoke;
+    }
   </style>
   <script>
     $('#myModal').on('shown.bs.modal', function () {
@@ -138,6 +146,32 @@
     function myFunction(x) {
       x.classList.toggle("already");
     }
+  </script>
+  <script>
+    $(document).ready(function () {
+      var clicks = 0;
+      $(".empathy").click(function () {
+        clicks++;
+        if (clicks % 2 == 1) { $("#Toast1").toast('show'); }
+        else { $("#Toast11").toast('show'); }
+      });
+    });
+    $(document).ready(function () {
+      var clicks = 0;
+      $(".question").click(function () {
+        clicks++;
+        if (clicks % 2 == 1) { $("#Toast2").toast('show'); }
+        else { $("#Toast22").toast('show'); }
+      });
+    });
+    $(document).ready(function () {
+      var clicks = 0;
+      $(".favorite").click(function () {
+        clicks++;
+        if (clicks % 2 == 1) { $("#Toast3").toast('show'); }
+        else { $("#Toast33").toast('show'); }
+      });
+    });
   </script>
 </head>
 
@@ -221,13 +255,13 @@
                 <hr><a href="#" class="badge badge-success">燙傷</a><a href="#" class="badge badge-info">後續處理</a><a
                   href="#" class="badge badge-dark">我是全能小畫家</a>
                 <hr>
-                <div class="give"><a onclick="myFunction(this)" class="icon" href="#" tabindex="0" data-toggle="popover"
-                    data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
-                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon" href="#" tabindex="0"
-                      data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑" data-placement="top"><img
-                        src="question.png"></a></span><span><a onclick="myFunction(this)" class="icon" href="#"
-                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="收藏!"
-                      data-placement="top"><img src="favorite.png"></a></span></div>
+                <div class="give"><a onclick="myFunction(this)" class="icon empathy" href="#" tabindex="0"
+                    data-toggle="popover" data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
+                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon question" href="#"
+                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑"
+                      data-placement="top"><img src="question.png"></a></span><span><a onclick="myFunction(this)"
+                      class="icon favorite" href="#" tabindex="0" data-toggle="popover" data-trigger="hover" title=""
+                      data-content="收藏!" data-placement="top"><img src="favorite.png"></a></span></div>
                 <div class="total">給予關懷:18 &nbsp 回應:10 &nbsp <span>懷疑:1</span></div>
               </div>
               <div class="comments">
@@ -300,13 +334,13 @@
                 <hr><a href="#" class="badge badge-success">標籤</a><a href="#" class="badge badge-info">標籤</a><a href="#"
                   class="badge badge-dark">標籤</a>
                 <hr>
-                <div class="give"><a onclick="myFunction(this)" class="icon" href="#" tabindex="0" data-toggle="popover"
-                    data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
-                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon" href="#" tabindex="0"
-                      data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑" data-placement="top"><img
-                        src="question.png"></a></span><span><a onclick="myFunction(this)" class="icon" href="#"
-                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="收藏!"
-                      data-placement="top"><img src="favorite.png"></a></span></div>
+                <div class="give"><a onclick="myFunction(this)" class="icon empathy" href="#" tabindex="0"
+                    data-toggle="popover" data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
+                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon question" href="#"
+                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑"
+                      data-placement="top"><img src="question.png"></a></span><span><a onclick="myFunction(this)"
+                      class="icon favorite" href="#" tabindex="0" data-toggle="popover" data-trigger="hover" title=""
+                      data-content="收藏!" data-placement="top"><img src="favorite.png"></a></span></div>
                 <div class="total">給予關懷:98 &nbsp 回應:81 &nbsp <span>懷疑:2</span></div>
               </div>
               <div class="comments">
@@ -368,13 +402,13 @@
                 <hr><a href="#" class="badge badge-success">標籤</a><a href="#" class="badge badge-info">標籤</a><a href="#"
                   class="badge badge-dark">標籤</a>
                 <hr>
-                <div class="give"><a onclick="myFunction(this)" class="icon" href="#" tabindex="0" data-toggle="popover"
-                    data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
-                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon" href="#" tabindex="0"
-                      data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑" data-placement="top"><img
-                        src="question.png"></a></span><span><a onclick="myFunction(this)" class="icon" href="#"
-                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="收藏!"
-                      data-placement="top"><img src="favorite.png"></a></span></div>
+                <div class="give"><a onclick="myFunction(this)" class="icon empathy" href="#" tabindex="0"
+                    data-toggle="popover" data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
+                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon question" href="#"
+                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑"
+                      data-placement="top"><img src="question.png"></a></span><span><a onclick="myFunction(this)"
+                      class="icon favorite" href="#" tabindex="0" data-toggle="popover" data-trigger="hover" title=""
+                      data-content="收藏!" data-placement="top"><img src="favorite.png"></a></span></div>
                 <div class="total">給予關懷:30 &nbsp 回應:12 &nbsp <span>懷疑:0</span></div>
               </div>
               <div class="comments">
@@ -436,13 +470,13 @@
                 <hr><a href="#" class="badge badge-success">標籤</a><a href="#" class="badge badge-info">標籤</a><a href="#"
                   class="badge badge-dark">標籤</a>
                 <hr>
-                <div class="give"><a onclick="myFunction(this)" class="icon" href="#" tabindex="0" data-toggle="popover"
-                    data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
-                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon" href="#" tabindex="0"
-                      data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑" data-placement="top"><img
-                        src="question.png"></a></span><span><a onclick="myFunction(this)" class="icon" href="#"
-                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="收藏!"
-                      data-placement="top"><img src="favorite.png"></a></span></div>
+                <div class="give"><a onclick="myFunction(this)" class="icon empathy" href="#" tabindex="0"
+                    data-toggle="popover" data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
+                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon question" href="#"
+                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑"
+                      data-placement="top"><img src="question.png"></a></span><span><a onclick="myFunction(this)"
+                      class="icon favorite" href="#" tabindex="0" data-toggle="popover" data-trigger="hover" title=""
+                      data-content="收藏!" data-placement="top"><img src="favorite.png"></a></span></div>
                 <div class="total">給予關懷:30 &nbsp 回應:12 &nbsp <span>懷疑:0</span></div>
               </div>
               <div class="comments">
@@ -504,13 +538,13 @@
                 <hr><a href="#" class="badge badge-success">標籤</a><a href="#" class="badge badge-info">標籤</a><a href="#"
                   class="badge badge-dark">標籤</a>
                 <hr>
-                <div class="give"><a onclick="myFunction(this)" class="icon" href="#" tabindex="0" data-toggle="popover"
-                    data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
-                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon" href="#" tabindex="0"
-                      data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑" data-placement="top"><img
-                        src="question.png"></a></span><span><a onclick="myFunction(this)" class="icon" href="#"
-                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="收藏!"
-                      data-placement="top"><img src="favorite.png"></a></span></div>
+                <div class="give"><a onclick="myFunction(this)" class="icon empathy" href="#" tabindex="0"
+                    data-toggle="popover" data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
+                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon question" href="#"
+                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑"
+                      data-placement="top"><img src="question.png"></a></span><span><a onclick="myFunction(this)"
+                      class="icon favorite" href="#" tabindex="0" data-toggle="popover" data-trigger="hover" title=""
+                      data-content="收藏!" data-placement="top"><img src="favorite.png"></a></span></div>
                 <div class="total">給予關懷:30 &nbsp 回應:12 &nbsp <span>懷疑:0</span></div>
               </div>
               <div class="comments">
@@ -572,13 +606,13 @@
                 <hr><a href="#" class="badge badge-success">標籤</a><a href="#" class="badge badge-info">標籤</a><a href="#"
                   class="badge badge-dark">標籤</a>
                 <hr>
-                <div class="give"><a onclick="myFunction(this)" class="icon" href="#" tabindex="0" data-toggle="popover"
-                    data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
-                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon" href="#" tabindex="0"
-                      data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑" data-placement="top"><img
-                        src="question.png"></a></span><span><a onclick="myFunction(this)" class="icon" href="#"
-                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="收藏!"
-                      data-placement="top"><img src="favorite.png"></a></span></div>
+                <div class="give"><a onclick="myFunction(this)" class="icon empathy" href="#" tabindex="0"
+                    data-toggle="popover" data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
+                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon question" href="#"
+                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑"
+                      data-placement="top"><img src="question.png"></a></span><span><a onclick="myFunction(this)"
+                      class="icon favorite" href="#" tabindex="0" data-toggle="popover" data-trigger="hover" title=""
+                      data-content="收藏!" data-placement="top"><img src="favorite.png"></a></span></div>
                 <div class="total">給予關懷:30 &nbsp 回應:12 &nbsp <span>懷疑:0</span></div>
               </div>
               <div class="comments">
@@ -640,13 +674,13 @@
                 <hr><a href="#" class="badge badge-success">標籤</a><a href="#" class="badge badge-info">標籤</a><a href="#"
                   class="badge badge-dark">標籤</a>
                 <hr>
-                <div class="give"><a onclick="myFunction(this)" class="icon" href="#" tabindex="0" data-toggle="popover"
-                    data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
-                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon" href="#" tabindex="0"
-                      data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑" data-placement="top"><img
-                        src="question.png"></a></span><span><a onclick="myFunction(this)" class="icon" href="#"
-                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="收藏!"
-                      data-placement="top"><img src="favorite.png"></a></span></div>
+                <div class="give"><a onclick="myFunction(this)" class="icon empathy" href="#" tabindex="0"
+                    data-toggle="popover" data-trigger="hover" title="" data-placement="top" data-content="給予關懷"><img
+                      src="empathy.png"></a><span><a onclick="myFunction(this)" class="icon question" href="#"
+                      tabindex="0" data-toggle="popover" data-trigger="hover" title="" data-content="深表懷疑"
+                      data-placement="top"><img src="question.png"></a></span><span><a onclick="myFunction(this)"
+                      class="icon favorite" href="#" tabindex="0" data-toggle="popover" data-trigger="hover" title=""
+                      data-content="收藏!" data-placement="top"><img src="favorite.png"></a></span></div>
                 <div class="total">給予關懷:30 &nbsp 回應:12 &nbsp <span>懷疑:0</span></div>
               </div>
               <div class="comments">
@@ -678,6 +712,69 @@
       </div>
     </div>
     <hr>
+
+
+    <!--toast1-->
+    <div class="toast ya" id="Toast1" style="position: absolute; top: 25%; right: 21%;z-index: 1055;" data-delay="1500">
+      <div class="toast-header">
+        <h5 class="mr-auto">&nbsp 給予關懷</h5>
+      </div>
+      <div class="toast-body">
+        <img src="empathy.png" alt="給予關懷">
+      </div>
+    </div>
+    <!--toast11-->
+    <div class="toast non" id="Toast11" style="position: absolute; top: 25%; right: 21%;z-index: 1055;"
+      data-delay="1500">
+      <div class="toast-header">
+        <h5 class="mr-auto">&nbsp取消關懷</h5>
+      </div>
+      <div class="toast-body">
+        <img src="empathy.png" alt="給予關懷">
+      </div>
+    </div>
+
+
+    <!--toast2-->
+    <div class="toast ya" id="Toast2" style="position: absolute; top: 25%; right: 21%;z-index: 1055;" data-delay="1500">
+      <div class="toast-header">
+        <h5 class="mr-auto">&nbsp 深表懷疑</h5>
+      </div>
+      <div class="toast-body">
+        <img src="question.png" alt="懷疑">
+      </div>
+    </div>
+    <!--toast22-->
+    <div class="toast non" id="Toast22" style="position: absolute; top: 25%; right: 21%;z-index: 1055;"
+      data-delay="1500">
+      <div class="toast-header">
+        <h5 class="mr-auto">&nbsp 收回懷疑</h5>
+      </div>
+      <div class="toast-body">
+        <img src="question.png" alt="懷疑">
+      </div>
+    </div>
+
+
+    <!--toast3-->
+    <div class="toast ya" id="Toast3" style="position: absolute; top: 25%; right: 21%;z-index: 1055;" data-delay="1500">
+      <div class="toast-header">
+        <h5 class="mr-auto">&nbsp &nbsp 收藏!!</h5>
+      </div>
+      <div class="toast-body">
+        <img src="favorite.png" alt="收藏">
+      </div>
+    </div>
+    <!--toast33-->
+    <div class="toast non" id="Toast33" style="position: absolute; top: 25%; right: 21%;z-index: 1055;"
+      data-delay="1500">
+      <div class="toast-header">
+        <h5 class="mr-auto">&nbsp 取消收藏!</h5>
+      </div>
+      <div class="toast-body">
+        <img src="favorite.png" alt="收藏">
+      </div>
+    </div>
 
 
   </div>
